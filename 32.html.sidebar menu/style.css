@@ -1,0 +1,110 @@
+/* <!-- website 8 -- easy tutorials -- how to make sidebar menu on website using html and css --> */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(background.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.side-nav {
+  width: 110px;
+  height: 100%;
+   position: fixed;/*In CSS, the position: fixed; property is used to set the position of an element relative to the viewport, regardless of scrolling. When an element has a fixed position, it remains in the same position even if the page is scrolled. */
+  top: 0;
+  left: 0;
+  padding: 30px 15px;
+  background: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(5px);/*The CSS property backdrop-filter with the value blur(5px) is used to apply a blur effect to the backdrop behind an element. It creates a blurred version of the content behind the element, giving a frosted glass-like effect. */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;/*The CSS property flex-direction: column; is used to specify the direction in which flex items are laid out within a flex container. When this property is applied to a container, the flex items are arranged vertically in a column format.*/
+  transition: width 0.5s;
+}
+
+.side-nav:hover {
+  width: 250px;
+}
+.side-nav:hover .user div {
+  display: block;
+}
+.side-nav:hover .user {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+}
+.side-nav:hover .star-img {
+  display: block;/* The CSS property display: block; is used to change the display behavior of an element. When applied to an element, it changes it from the default inline or inline-block display type to a block-level display type.
+
+  */
+}
+.side-nav:hover .user-img {
+  margin: 0;
+}
+.side-nav:hover ul li p {
+  display: block;
+}
+.side-nav:hover ul li img {
+  margin-right: 10px;
+}
+.side-nav:hover ul li {
+  justify-content: flex-start;
+}
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60px;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.user div {
+  display: none;
+}
+.user h2 {
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.user-img {
+  width: 40px;
+  border-radius: 50%;
+  margin: auto;
+}
+.star-img {
+  width: 20px;
+  display: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0 15px;
+}
+ul li {
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+ul li img {
+  width: 30px;
+  margin-right: 0px;
+}
+
+ul li p {
+  white-space: nowrap;
+  display: none;
+}
