@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: grey;
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 20px 65px;
+  text-decoration: none;
+  border: 2px solid aqua;
+  color: white;
+  border-radius: 20px;
+}
+/*  majking background animation with  pseudo elemenyts is problematic  */
+a::before {
+    border-radius: 20px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* z-index: -1; */
+  width: 0;
+  height: 100%; /* Height of the underline */
+  background: #009688;
+  transition: width 0.3s ease; /* Smoothly transition width change */
+}
+
+a:hover::before {
+  width: 100%; /* Expand the underline from left to right */
+}

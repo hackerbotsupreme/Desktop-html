@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: grey;
+}
+a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-weight: bold;
+  padding: 20px 65px;
+  text-decoration: none;
+  /* background-color: trba; */
+  border: 2px solid aqua;
+  color: white;
+  border-radius: 20px;
+}
+
+span {
+  /* height: 100%;
+  width: 100%;
+  display: inline-block; */
+  /* dont use  height width with block as this will take up the  space and rthe button will no more will be button and also the  background animation is not possible using this  */
+  background: #009688;
+  height: 100%;
+  width: 100%;
+  position: absolute; /* Position absolutely within the anchor */
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: left; /* Scale from the left side */
+  transition: transform 1s ease; /* Smoothly transition the transform */
+  z-index: -1; /* Place the background behind the link text */
+}
+a:hover span {
+  transform: scaleX(1); /* Expand the background on hover */
+}
+
+
+

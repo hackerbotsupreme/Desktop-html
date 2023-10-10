@@ -1,0 +1,30 @@
+here's a logically structured outline of the steps involved in creating a rock, paper, scissors game in JavaScript:
+
+HTML Setup:
+Create buttons for rock, paper, and scissors choices in your HTML.
+Use appropriate IDs or classes to identify these elements.
+JavaScript Implementation:
+Get user choice element using getElementById or querySelector.
+Get computer choice element using the same method.
+Variable Declaration:
+Use let or const to declare variables for user and computer choices.
+Choice Generation:
+Create a function to generate a random choice for the computer using Math.random.
+Map the random number to rock, paper, or scissors.
+Update the computer choice element's innerHTML to display the result.
+Result Calculation Function:
+Create a function that takes both user and computer choices as parameters.
+Use a switch statement or if-else conditions to determine the result based on choices.
+Return a string indicating win, lose, or draw.
+Event Listeners:
+Attach event listeners to the user choice buttons.
+When a button is clicked, call the choice generation function for the computer.
+Invoke the result calculation function with both user and computer choices as arguments.
+Display Result:
+Update a result message element's innerHTML with the result of the game.
+Scope in JavaScript:
+Understand the concept of block scope (variables declared using let and const).
+Understand global scope (variables declared outside any function).
+Remember that JavaScript works asynchronously, so it's important to structure your code to handle events and their associated functions in a synchronized manner. This will ensure that the game's outcome is determined correctly.
+
+Please note that this outline provides a high-level view of the steps involved in creating the game. You'll need to write the actual code for each step to implement the functionality.
