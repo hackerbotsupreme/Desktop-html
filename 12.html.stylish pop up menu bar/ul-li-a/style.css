@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+#menu-overlay ul {
+  position: relative;
+}
+
+/* Styling for each individual menu item */
+#menu-overlay ul li {
+  position: relative;
+  list-style: none;
+  text-align: center;
+  display: block;
+}
+
+/* Styling for the links in the menu items */
+#menu-overlay ul li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 3.5em;
+  padding: 0 10px;
+  color: blue;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/* Styling for the underline animation effect on link hover */
+#menu-overlay ul li a:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: #ff0;
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: right;
+  transition: 0.5s transform;
+}
+
+/* Apply the underline animation when hovering over a link */
+#menu-overlay ul li a:hover:before {
+  transform: translateY(-50%) scaleX(1);
+  transform-origin: left;
+  transition: 0.5s transform;
+}

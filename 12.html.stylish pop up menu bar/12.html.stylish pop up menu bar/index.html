@@ -1,0 +1,54 @@
+<!-- fullscreen overlay responsive navigation menu -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <title>FULLSCREEN MENU \ VANILLA JAVASCRIPT </title>
+</head>
+<body>
+    <div id="toggleIcon" onclick="menuToggle()"></div>
+    <!-- invoking the function to change  -->
+    <div id="menu-overlay">
+        <ul><li><a href="">HOME</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">SERVICES</a></li>
+            <li><a href="">PORTFOLIO</a></li>
+            <li><a href="">OUR TEAM</a></li>
+            <li><a href="">CONTACT</a></li>
+        </ul>
+    </div>
+    <!-- creating what will be showed  -->
+    <script>
+        // fuction to trigger which will change the icon and pop the menu 
+        function menuToggle(){
+            var nav= document.getElementById('menu-overlay');
+            nav.classList.toggle('active');
+            var nav= document.getElementById('toggleIcon');
+            nav.classList.toggle('active');
+        }
+        // what does this  function is doing 
+            // In summary, the menuToggle() function is responsible for
+            // toggling the presence of the class 'active' on two different elements with the IDs 
+            // 'menu-overlay' and 'toggleIcon'. By toggling this class, it can change the appearance 
+            // or behavior of these elements, typically used for implementing menu overlays or toggling 
+            // menu icons between active and inactive states.
+    </script>
+</body>
+</html> 

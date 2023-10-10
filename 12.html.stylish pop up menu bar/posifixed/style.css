@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/* Styling for the overlay menu */
+#menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  transform: scale(0);
+  transition: 1s;
+}
+
+/* When the menu is active, scale it to full size */
+#menu-overlay.active {
+  transform: scale(1);
+}
+
+/* Styling for the toggle icon button */
+#toggleIcon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #ff0 url(open.png);
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Change the icon to 'close' when the menu is active */
+#toggleIcon.active {
+  background: #ff0 url(close.png);
+}

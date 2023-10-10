@@ -1,0 +1,151 @@
+what is interesting in this -->
+** here think like every transition is a state so when writing css remember that like '#toggleIcon' and '#toggleIcon.active'.
+index.html-->
+    the html of it is really interesting , 
+    here ,
+    1. first we have created a container that will invoke the function on click that will change the icon and main content of thepage .
+    but the main interesting thing is the image means img src is not added there.
+    2.second , we made the content what to be added onclick/
+    3. we make the fuction that will do all this on call/invoke.       
+        <div id="toggleIcon" onclick="menuToggle()"></div>
+    <!-- invoking the function to change  -->
+    <div id="menu-overlay">
+        <ul><li><a href="">HOME</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">SERVICES</a></li>
+            <li><a href="">PORTFOLIO</a></li>
+            <li><a href="">OUR TEAM</a></li>
+            <li><a href="">CONTACT</a></li>
+        </ul>
+    </div>
+    <!-- creating what will be showed  -->
+    
+
+    and not only that the css is also quite interesting ,
+    see there's first we actively amking and finishing 
+    the styling and animation of the main contaent but then 
+    we make that invisble by adding scale(0) where it will be visible
+    or scaloed to 1 when it's active .
+
+    from here , we got two things first make it with scale 0.
+    and another state where its active .
+
+    function menuToggle(){
+                var nav= document.getElementById('menu-overlay');
+                nav.classList.toggle('active');
+                var nav= document.getElementById('toggleIcon');
+                nav.classList.toggle('active');
+            }
+            // what does this  function is doing 
+                // In summary, the menuToggle() function is responsible for
+                // toggling the presence of the class 'active' on two different elements with the IDs 
+                // 'menu-overlay' and 'toggleIcon'. By toggling this class, it can change the appearance 
+                // or behavior of these elements, typically used for implementing menu overlays or toggling 
+                // menu icons between active and inactive states.
+style.css-->
+ 1.
+    #menu-overlay ul li a:before{
+        content:"";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background:#ff0 ;
+        transform: translateY(-50%) scaleX(0);
+        transform-origin:right;
+        transition:0.5s transform;
+    }
+
+    #menu-overlay ul li a:hover:before{
+        transform: translateY(-50%) scaleX(1);
+        transform-origin: left;
+        transition: 0.5s transform;
+    }
+ 2.
+    #menu-overlay{
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background: #f00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    transform: scale(0);
+    /* The line transform: scale(0); is a CSS declaration that is applied to an HTML element. It implies a transformation of the element's scale. 
+        In this specific case, the scale(0) transformation is used, which means that the element is being scaled down to a factor of 0. This effectively makes the element completely invisible and removes its visual presence on the page. The element's width, height, and any other dimensions are reduced to zero, making it appear as if it is not there.
+        By setting the scale to 0, the element effectively disappears from view, but it still takes up space in the document flow. It can be useful for hiding an element while still preserving its layout impact. */
+    transition: 1s;
+    }
+    #menu-overlay.active{
+    transform: scale(1);
+    }
+ 3.#menu-overlay ul li a{
+    position: relative ;
+    text-decoration: none;
+    font-size: 3.5em;
+    padding: 0 10px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase ;
+    display: inline-block;
+        /* display: block;
+        display: inline-block;
+        what is the difference between these two? */
+        /* In summary, the main difference between display: block; and display: inline-block; is how they interact with surrounding elements and flow within the document. Block-level elements create line breaks and stack vertically, while inline-block elements flow with the text or other inline elements, allowing them to be positioned on the same line. */
+    } 
+
+important excitingg details :-->
+
+1.explain the similarity between the position:fixed and box-sizing: border-box .
+2.what is the alternative of top,left,right,bottom :0 ?
+height:100vh and width:100%.
+3.menu-overlay ul li a:hover:before 
+#menu-overlay ul li a:before -  what is the logic of these two lines?
+
+so ,first 
+a:before , The before pseudo-element represents content inserted before the content of the anchor element.
+
+then , the hover class,
+ The :hover pseudo-class in the first line further targets the pseudo-element when the anchor is being hovered over.
+
+ so that means menu-overlay ul li a:hover:before  this means 
+ in this we are specifying what will happen in the before when we hover over a .
+
+
+the more brief logical explaination is here ------
+/*  an interesing thing about pseudo element is  */
+/* Yes, you can apply pseudo-elements like ::before and ::after to most elements in HTML using CSS. */
+#menu-overlay ul li a:before{
+    content:"";/* always start your pseudo elemnt from content , as everything is passively related to this  */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background:#ff0 ;
+    transform: translateY(-50%) scaleX(0);
+    /* the magic/solution for this line is to feel the animation before your eyes */
+    /* check out points.txt */
+    transform-origin:right;/* it says  the below before transformation ends at rigth  */
+    transition:0.5s transform;/* the above tranformation happens within  0.5s  */
+}
+
+#menu-overlay ul li a:hover:before{ 
+     transform: translateY(-50%) scaleX(1);/* translateY sets the ground and give it the size  */
+    transform-origin: left;/*the visual expanding size-orgin will be left when hovered  */
+    transition: 0.5s transform;/* the above transformation will happen within 0.5s  */
+}
+
+summary is  a transformation will happen on hover on a a from the left which ends  at  the right  as withh hover ends .
+
+
+
+
+
+
+
+

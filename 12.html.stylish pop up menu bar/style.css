@@ -1,0 +1,175 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#menu-overlay{
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background: #f00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    transform: scale(0);
+    transition: 1s;
+}
+
+#menu-overlay.active{
+    transform: scale(1);
+}
+
+#menu-overlay ul{
+    position: relative;
+
+}
+#menu-overlay ul li{
+    position: relative;
+    list-style: none;
+    text-align: center;
+    display: block;
+}
+#menu-overlay ul li a{
+    position: relative ;
+    text-decoration: none;
+    font-size: 3.5em;
+    padding: 0 10px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase ;
+    display: inline-block;
+    
+} 
+
+#menu-overlay ul li a:before{
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background:#ff0 ;
+    transform: translateY(-50%) scaleX(0);
+    transform-origin:right;
+    transition:0.5s transform;
+
+}
+
+#menu-overlay ul li a:hover:before{
+    transform: translateY(-50%) scaleX(1);
+    transform-origin: left;
+    transition: 0.5s transform;
+
+}
+
+#toggleIcon{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #ff0 url(open.png);
+    z-index: 1;
+    cursor: pointer;
+}
+
+#toggleIcon.active{
+    background: #ff0 url(close.png);
+}
+ */
+/* ///////////////////////////////////////////// */
+/* using chatgpt */
+/* Reset default margins, padding, and set font family */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/* Styling for the overlay menu */
+#menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  transform: scale(0);
+  transition: 1s;
+}
+
+/* When the menu is active, scale it to full size */
+#menu-overlay.active {
+  transform: scale(1);
+}
+
+/* Styling for the menu items list */
+#menu-overlay ul {
+  position: relative;
+}
+
+/* Styling for each individual menu item */
+#menu-overlay ul li {
+  position: relative;
+  list-style: none;
+  text-align: center;
+  display: block;
+}
+
+/* Styling for the links in the menu items */
+#menu-overlay ul li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 3.5em;
+  padding: 0 10px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/* Styling for the underline animation effect on link hover */
+#menu-overlay ul li a:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: #ff0;
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: right;
+  transition: 0.5s transform;
+}
+
+/* Apply the underline animation when hovering over a link */
+#menu-overlay ul li a:hover:before {
+  transform: translateY(-50%) scaleX(1);
+  transform-origin: left;
+  transition: 0.5s transform;
+}
+
+/* Styling for the toggle icon button */
+#toggleIcon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #ff0 url(open.png);
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Change the icon to 'close' when the menu is active */
+#toggleIcon.active {
+  background: #ff0 url(close.png);
+}
+

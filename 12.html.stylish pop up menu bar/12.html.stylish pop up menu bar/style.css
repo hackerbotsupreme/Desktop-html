@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#menu-overlay{
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background: #f00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    transform: scale(0);
+    /* The line transform: scale(0); is a CSS declaration that is applied to an HTML element. It implies a transformation of the element's scale. 
+        In this specific case, the scale(0) transformation is used, which means that the element is being scaled down to a factor of 0. This effectively makes the element completely invisible and removes its visual presence on the page. The element's width, height, and any other dimensions are reduced to zero, making it appear as if it is not there.
+        By setting the scale to 0, the element effectively disappears from view, but it still takes up space in the document flow. It can be useful for hiding an element while still preserving its layout impact. */
+    transition: 1s;
+}
+/*  the scale is 0 . */
+
+#menu-overlay.active{
+    transform: scale(1);
+}
+
+#menu-overlay ul{
+    position: relative;
+}
+#menu-overlay ul li{
+    position: relative;
+    list-style: none;
+    text-align: center;
+    display: block;
+    /* Setting display: block; implies that the element will be rendered as a block-level element. Block-level elements start on a new line and take up the full width available within their parent container. They stack vertically, one after another. */
+}
+#menu-overlay ul li a{
+    position: relative ;
+    text-decoration: none;
+    font-size: 3.5em;
+    padding: 0 10px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase ;
+    display: inline-block;
+        /* display: block;
+        display: inline-block;
+        what is the difference between these two? */
+        /* In summary, the main difference between display: block; and display: inline-block; is how they interact with surrounding elements and flow within the document. Block-level elements create line breaks and stack vertically, while inline-block elements flow with the text or other inline elements, allowing them to be positioned on the same line. */
+} 
+/*  an interesing thing about pseudo element is  */
+/* Yes, you can apply pseudo-elements like ::before and ::after to most elements in HTML using CSS. */
+#menu-overlay ul li a:before{
+    content:"";/* always start your pseudo elemnt from content , as everything is passively related to this  */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background:#ff0 ;
+    transform: translateY(-50%) scaleX(0);
+    /* the magic/solution for this line is to feel the animation before your eyes */
+    /* check out points.txt */
+    transform-origin:right;/* it says  the below before transformation ends at rigth  */
+    transition:0.5s transform;/* the above tranformation happens within  0.5s  */
+}
+
+#menu-overlay ul li a:hover:before{ 
+     transform: translateY(-50%) scaleX(1);/* translateY sets the ground and give it the size  */
+    transform-origin: left;/*the visual expanding size-orgin will be left when hovered  */
+    transition: 0.5s transform;/* the above transformation will happen within 0.5s  */
+}
+
+#toggleIcon{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #ff0 url(open.png);
+    z-index: 1;
+    cursor: pointer;
+}
+
+#toggleIcon.active{
+    background: #ff0 url(close.png);
+}
+
