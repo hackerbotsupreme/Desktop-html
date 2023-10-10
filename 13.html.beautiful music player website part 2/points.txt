@@ -1,0 +1,75 @@
+interesting things here -->
+the <script> tag inside index.html-->
+
+    <script>
+            var mySong=document.getElementById("mySong")
+            var icon=document.getElementById("icon")
+            icon.onclick=function(){
+                if(mySong.paused){
+                    mySong.play();
+                    icon.src="pause.png";
+                }else{
+                    mySong.pause();
+                    icon.src="play.png";
+                }
+            }
+    </script>
+the distribution of <div> area as right-col and left-col in a container named content-->
+    index.html-->
+            <div class="content">
+                <div class="left-col">
+                    <h1>THE <br>REAL <br>SOUND </h1>
+                </div>
+                <div class="right-col">
+                    <P>CLICK HERE TO LISTEN </P>
+                    <img src="play.png"  id="icon">
+                </div>
+            </div>
+    style.css-->
+    .content{
+        width: 100%;
+        position: absolute;
+        top: 30%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

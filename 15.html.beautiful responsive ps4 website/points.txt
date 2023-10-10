@@ -1,0 +1,91 @@
+what's interteresting in this ?
+index.html-->
+    1. how the div's are structured?
+    everything is in the container .
+    first thers is a navar .
+    second there is a container named row .
+    inside that two div/container's have made which are column-1 and column-2.
+    and at last there's a social links .  
+style.css-->
+
+    .container{
+        width: 100%;
+        min-height: 100vh;
+        padding-left: 8%;
+        padding-right: 8%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 100px 0 ;
+    }
+    .col-1{
+        flex-basis: 40%;
+        position: relative;
+        margin-left: 50px;
+
+    }
+    .col-1::after{
+        content: '';
+        width: 10px;
+        height: 57%;
+        background: linear-gradient(#ff460f,#080505);
+        position: absolute;
+        left: -40px;
+        top: 8px;
+    }
+    .col-2{
+        position: relative;
+        flex-basis: 60%;
+        display: flex;
+        align-items: center;
+
+
+    }
+    col-2{
+        position: relative;
+        flex-basis: 60%;
+        display: flex;
+        align-items: center;
+
+
+    }
+    .col-2, .controller{
+        width: 90%;
+
+    }
+    .colour-box{
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: linear-gradient(#ff54a2,#ff575a);
+        border-radius: 20px 0 0 20px;
+        height: 100%;
+        width: 80%;
+        z-index: -1;
+        transform: translateX(150px);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
