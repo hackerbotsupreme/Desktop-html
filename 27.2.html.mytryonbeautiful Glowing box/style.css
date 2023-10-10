@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Cinzel", serif;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  color: white;
+  background-color: #303134;
+}
+.container {
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container span:nth-child(1) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: animate 5s linear infinite;
+
+  border: 2px solid #fff;
+}
+.container span:nth-child(2) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: animate 7s linear infinite;
+
+  border: 2px solid #fff;
+}
+.container span:nth-child(3) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: animate 10s linear infinite;
+
+  border: 2px solid #fff;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+}
+.container:hover span:nth-child(1) {
+  background-color: rgb(32, 32, 223);
+}
+.container:hover span:nth-child(2) {
+  background-color: rgb(32, 32, 223);
+}
+.container:hover span:nth-child(3) {
+  background-color: rgb(32, 32, 223);
+}
+
+.text a {
+  background-color: transparent;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  height: 40px;
+  border: 2px solid #fff;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;
+}
+.text h1 {
+  font-weight: bold;
+}
+.container a:hover{
+    background: #fff;
+    color: #333;
+}

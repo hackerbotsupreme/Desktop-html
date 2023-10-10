@@ -1,0 +1,141 @@
+what's interesting in this -->
+
+index.html -->
+
+here we are making this square to give the circles a measure . 
+    <div class="square">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="content">
+                <h2>DIV BOX ANIMATION</h2>
+                <p>HI MILAN EI ANIMATION TA KAMON , IF YOU LIKE IT PLEASE CONSIDER SHARING AND DONT FORGET TO DROP YOUR REVIEW. YOUR KINDNESS WILL BE APPRICIATED.</p>
+                <a href="">Read more</a>
+            </div>
+    </div>
+
+style.css-->
+we have centered everything inside the bidy.
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+then we will make the children rotate after giving it the shape .
+
+try this code and you will see that the span/circles are shaping accorading to the body 
+  while the position is set absolute which means it should have positioned accorading to the 
+  div.square so why is that 
+  that's because I apologize for the confusion in my previous response. You are correct, in the given CSS code, when the .square class does not have position: relative set, the span element with the selector .square span:nth-child(1) will be positioned relative to the body element, not the .square div.
+
+  When an absolutely positioned element does not have a positioned ancestor, it is positioned relative to the initial containing block, which is typically the body element.
+
+  So, in this case, when you remove the position: relative property from the .square class, the span element will be positioned relative to the body.
+  always remember that absolute means positioned accorading to the closest positioned ancestor(exclude the static the, default one)  .
+  and  the relative means to be positioned acoorading to the og position of that element. 
+    .square {
+     
+      width: 400px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .square span:nth-child(1) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #fff;
+      border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+      transition: 0.5s;
+      animation: animate 6s linear infinite;
+    }
+
+    .square:hover span:nth-child(1) {
+      background: rgba(0, 0, 255, 0.8);
+      border: none;
+    }
+    
+the magic of poition: relative in the the code . 
+.square span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  transition: 0.5s;
+  animation: animate 6s linear infinite;
+}
+
+and finallly give it the backgriund color on hover 
+.square:hover span:nth-child(1) {
+  background: rgba(0, 0, 255, 0.8);
+  border: none;
+}
+the presence of z-index & transition in the garden of position absolute
+
+
+5. and lastly the magic of display: inline-block 
+.content a {
+  /* position: relative; */
+  display: inline-block;
+  margin-top: 10px;
+  border: 2px solid #fff;
+  padding: 6px 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;
+}
+the psoitioning/margin from the top is done only because of display:inline-block 
+the display: inline-block; property allows elements to be displayed inline, flow with other elements horizontally, have block-like properties (width, height, margin, padding), and avoid line breaks before or after themselves.
+display: inline-block; combines these two behaviors. It allows an element to be displayed as an inline element, so it will appear next to other elements horizontally. However, it also allows the element to have properties like width and height, just like a block element. This means you can set the size of the element and it will still flow with other inline elements.
+In summary, display: inline-block; is useful when you want an element to have a specific size and also appear next to other elements on the same line.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
