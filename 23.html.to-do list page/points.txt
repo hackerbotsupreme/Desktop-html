@@ -1,0 +1,205 @@
+what's intersting in  this fiel-->
+index.html-->
+    aligning the he along eith icon/img.
+    and then making a  container named row then giving it the input ansd a button 
+    and aligning them too . 
+    <div class="container">
+            <div class="todo-app">
+                <h2>To-Do list<img src="icon.png"> </h2>
+                <div class="row">
+                    <input type="text " id="input-box" placeholder="Add Your Text">
+                    <button onclick="AddTask()">Add</button>
+                </div>
+                <ul id="list-container">
+                </ul>
+            </div>
+        </div>
+style.css-->
+    handling og=f the html is very critical .
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'poppins',sans-serif;
+        box-sizing: border-box;
+    }
+
+    .container{
+        width: 100%;
+        min-height: 100vh;
+        background:linear-gradient(135deg,#153677,#4e084e) ;
+        padding: 10px;
+    }
+    .todo-app{
+        width: 100%;
+        max-width: 540px;
+        background: #fff;
+        margin: 100px auto 20px;
+        padding: 40px 30px 70px;
+        border-radius: 10px;
+
+    }
+
+
+    and handling of the row -->
+    .row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #edeef0;
+        border-radius: 30px;
+        padding-left: 20px;
+        margin-bottom: 25px;
+
+    }
+
+    usage of 'flex:1'
+    input{
+        flex: 1;
+        border :none;
+        outline: none;
+        background: transparent;
+        padding: 10px;
+
+    }
+
+
+
+    then the last -->
+    the addition of the tasks when the button clicked . 
+
+    ul li{
+        list-style: none;
+        font-size: 17px;
+        padding: 12px 8px 12px 50px;
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+    }
+
+    ul li::before{
+        content: '';
+        position: absolute;
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+        background-image: url(unchecked.png);
+        background-size: cover;
+        background-position: center;
+        top: 12px;
+        left: 8px;
+
+    }
+
+    ul li.checked{
+        color: #555;
+        text-decoration: line-through;
+
+    }
+    ul li.checked::before{
+        background-image: url(checked.png);
+
+    }
+
+    ul li span{
+        position: absolute;
+        right: 0;
+        top: 5px;
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        color: #555;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+
+    }
+
+    ul li span:hover{
+        background: #edeef0;
+    }
+the script.js-->
+    const inputBox= document.getElementById("input-box");
+    const listContainer= document.getElementById("list-container");
+
+    function AddTask(){
+        if (inputBox.value===''){
+            alert("You must write something");
+
+        }else{
+            let li=document.createElement("li")
+            li.innerHTML=  inputBox.value;
+            listContainer.appendChild(li);
+            let span= document.createElement("span")
+            span.innerHTML="\u00d7";
+            li.appendChild(span);
+        }
+        inputBox.value="";
+        saveData();
+    }
+
+    listContainer.addEventListener("click",function(e){
+        if(e.target.tagName==="LI"){
+            e.target.classList.toggle("checked");
+            saveData();
+        }else if(e.target.tagName==="SPAN"){
+            e.target.parentElement.remove();
+            saveData();
+        }
+    }, false);
+
+
+    function saveData(){
+        localStorage.setItem("data",listContainer.innerHTML);
+    }
+    function showTask(){
+        listContainer.innerHTML =localStorage.getItem("data");
+    }
+    showTask();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

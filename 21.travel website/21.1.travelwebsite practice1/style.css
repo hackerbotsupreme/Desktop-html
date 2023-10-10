@@ -1,0 +1,86 @@
+*{
+  background-image: linear-gradient(to right, red,blue,green,yellow,skyblue,brown);
+}
+p{
+  color: white;
+  font-size: 30px;
+  font-weight: 800;
+  text-align: left;
+  background-image: linear-gradient(blue,bliue);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-position: -750px 0;
+  background-repeat: no-repeat;
+  animation: animate 1s  linear alternate infinite;
+}
+@keyframes animate{
+  100%{
+    background-position: 0 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
