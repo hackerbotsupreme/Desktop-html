@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>heading is love story </h1>
+    <br><br><br>
+    <p> I Can’t Believe You’re Mine
+
+        It was a glorious, colorful autumn.
+        
+        We’d just left the coffee shop. When we walked by, she had giggled and pulled me inside, saying, “C’mon, let’s be basic white girls and get some pumpkin spice!”
+        
+        I don’t like coffee. I never had. But when she handed me my cup and looked into my eyes while I tried it, it was the best thing I’d ever tasted.
+        
+        My hand still tingled where she grabbed it.
+        
+        As we walked through the park with our drinks, a light drizzle began to fall. She pulled out an umbrella from her bag, I pulled up my hood and hunched my shoulders.
+        
+        “Don’t be silly,” she giggled, pulling me under the umbrella with her. I couldn’t help but laugh too, her laugh is infectious.
+        
+        As the sun started to shine again, she pulled me down to sit on a bench. She beamed down at me, and I could only gaze back adoringly.
+        
+        “So Ava…” She began. I knew this tone of voice, it’s dangerous.
+        <br><br>
+        “Who do you like?” She whispered, and I looked away. I wanted to say, ‘you, you, a thousand times you. You’re the only one I can ever think about. You’re gorgeous and sweet and funny and…’
+        
+        Instead, I shrugged my shoulders and looked down at my cup.
+        
+        She looked at me with a cautious smile. “If I tell you mine, will you tell me yours?”
+        
+        “Okay.” I said.
+        
+        “The person I like… …is you.”
+        
+        I drop my drink.
+        
+        Read the entire love story</p>
+    <BR><BR>
+    <a href="https://maxmayur.wordpress.com/love-stories/" target="_blank"><button class="button" type="button" >READ MORE.....</button></a>
+</body>
+</html>

@@ -1,0 +1,55 @@
+body{
+    background-image: linear-gradient(rgba(255,0,0,0.4),rgba(10,64,248,0.4)),url(newyear.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Dancing Script', cursive;
+    
+
+}
+
+.welcome{
+    margin: 10% auto 0;
+    color:#fff;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+span{
+    color: #00ffe7;
+}
+
+h1{
+    font-weight: normal;
+    
+}
+h2{
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 10px;
+}
+
+
+/* custom scrollbar */
+::-webkit-scrollbar{
+    width: 15px;
+    
+
+}
+
+::-webkit-scrollbar-track{
+    background: #fa0808;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(red,blue);
+    border-radius: 10px;
+}
+
+
+
+.left{
+    text-align: left;
+}
