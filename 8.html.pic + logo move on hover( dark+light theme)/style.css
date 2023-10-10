@@ -1,0 +1,172 @@
+/* how to make a website with image transform effect using html and css  */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .hero {
+    height: 100vh;
+    width: 100%;
+    background: var(--primary-color);
+    font-family: sans-serif;
+    position: relative;
+  }
+  
+  nav {
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    cursor: pointer;
+    width: 100px;
+    box-shadow: 5px 5px 7px rgb(255, 49, 214);
+    text-shadow: 2px 3px 5px rgb(62, 181, 250);
+  }
+  
+  nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    box-shadow: 5px 5px 7px rgb(255, 49, 214);
+    text-shadow: 2px 3px 5px rgb(62, 181, 250);
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
+  
+  nav ul li a:hover {
+    color: rgb(255, 0, 0);
+  }
+  
+  .info {
+    margin-left: 8%;
+    margin-top: 11%;
+  }
+  
+  .info h1 {
+    font-size: 70px;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    text-shadow: 2px 3px rgb(62, 181, 250);
+  }
+  span {
+    color: aqua;
+  }
+  
+  .info p {
+    color: var(--secondary-color);
+    line-height: 25px;
+    text-shadow: 1px 2px 5px rgb(62, 181, 250);
+  }
+  
+  .info a {
+    background: var(--secondary-color);
+    padding: 10px 18px;
+    text-decoration: none;
+    color: var(--primary-color);
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+    text-shadow: 2px 3px 5px rgb(62, 181, 250);
+    box-shadow: 5px 5px 7px rgb(255, 49, 214);
+  }
+  
+  .img-box {
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+  }
+  
+  .img-box img {
+    height: 100%;
+    position: absolute;
+    left: 50%; /*  The combination of left: 50%; and transform: translateX(-50%); is commonly used to horizontally center an element within its container. */
+    transform: translateX(-50%);
+    bottom: 0;
+    filter: drop-shadow(2px 2px 4px rgb(248, 45, 255));
+  
+    transition: bottom 1s, left 1s;
+    /* and does the transition element is applying to transform  in the given code ? ?
+  
+              No, the transition property in the given code is only applied to the bottom and left properties, not to the transform property.
+  
+              The line transition: bottom 1s, left 1s; specifies that the transitions for the bottom and left properties should have a duration of 1 second (1s). This means that any changes to the bottom or left property values will be animated over a 1-second period.
+  
+              However, the transform property is not included in the transition declaration, so changes to the transform property will not be animated. If you want to apply a transition effect to the transform property, you would need to include it in the transition property declaration, like this:
+  
+              transition: bottom 1s, left 1s, transform 1s; */
+  }
+  
+  .img-box:hover .back-img {
+    bottom: 40px;
+  }
+  
+  .img-box:hover .main-img {
+    left: 54%;
+  }
+  
+  /* 
+  the og css from the video 
+  .social-links{
+      margin-left: 8%;
+      margin-top: 100px;
+  
+  }
+  
+  .social-links a{
+      font-size: 40px;
+      color: var(--secondary-color);
+      margin-right: 20px;
+  } 
+  i commented/removed this bcz this was causing extra space and page rollup
+  */
+  
+  .social-links {
+    position: absolute;
+    right: 8%;
+    bottom: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .social-links a {
+    font-size: 60px;
+    margin-top: 20px;
+  }
+  
+  .social-links a:hover {
+    color: royalblue;
+  }
+  
+  #icon {
+    width: 30px;
+    cursor: pointer;
+  }
+  
+  nav ul {
+    flex: 1;
+    text-align: right;
+  }
+  
+  :root {
+    /* --primary-color: black;
+      --secondary-color: #fff; */
+    /* just change the --primary-color to change the back-ground colour of the  website  */
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+  }
+  
+  .dark-theme {
+    --primary-color: rgb(0, 0, 0);
+    --secondary-color: #fff;
+  }
+  

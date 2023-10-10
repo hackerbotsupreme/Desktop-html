@@ -1,0 +1,68 @@
+transition: bottom 1s,left 1s;
+/* and does the transition element is applying to transform  in the given code ? ?
+.img-box img{
+    height: 100%;
+    position: absolute;
+    left: 50%;/*  The combination of left: 50%; and transform: translateX(-50%); is commonly used to horizontally center an element within its container. */
+    transform: translateX(-50%);
+    bottom: 0;
+    transition: bottom 1s,left 1s;
+    /* and does the transition element is applying to transform  in the given code ? ?
+
+            No, the transition property in the given code is only applied to the bottom and left properties, not to the transform property.
+
+            The line transition: bottom 1s, left 1s; specifies that the transitions for the bottom and left properties should have a duration of 1 second (1s). This means that any changes to the bottom or left property values will be animated over a 1-second period.
+
+            However, the transform property is not included in the transition declaration, so changes to the transform property will not be animated. If you want to apply a transition effect to the transform property, you would need to include it in the transition property declaration, like this:
+
+            transition: bottom 1s, left 1s, transform 1s; */
+        }
+
+1.when we can position elements only by element left then why the transform has been used here -->
+    .img-box img{
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        /* transform: translateX(-50%); */
+        transition: bottom 1s,left 1s;
+        
+    }
+
+
+    The left: 50%; property positions the left edge of the image at 50% of its containing element's width. However, this alone would result in the image being centered based on its left edge.
+
+    To achieve horizontal centering, the transform: translateX(-50%); property is used. It moves the image horizontally by 50% of its own width to the left. This effectively centers the image horizontally within its container.
+
+    By combining left: 50%; and transform: translateX(-50%);, the image is horizontally centered within its container.
+
+    The combination of left: 50%; and transform: translateX(-50%); is commonly used to horizontally center an element within its container.
+
+    Setting left: 50%; positions the element's left edge at 50% of its container's width, which means the element is initially shifted to the right by half of its own width.
+
+    Then, transform: translateX(-50%); moves the element horizontally to the left by 50% of its own width. This adjustment effectively centers the element horizontally within its container.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
